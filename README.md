@@ -38,11 +38,11 @@ Check search results
 $ curl curl localhost:9200/dans-datacite/_search | jq .
 ```
 
-## Step 4. Run the re-index script
+## Step 5. Run the re-index script
 Re-index with a query to create seperate indeces per DataStation
 and subject
 ```
 $ npm run reindex
 ```
 
-## Step 5. Repeat step 4.
+## Step 6. Repeat step 4.
