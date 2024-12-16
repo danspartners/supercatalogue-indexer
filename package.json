@@ -1,0 +1,22 @@
+{
+  "name": "supercatalogue-indexer",
+  "author": "Gijsjan Brouwer",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npx ts-node src/index.ts",
+    "reindex": "npx ts-node src/reindex-by-query.ts"
+  },
+  "dependencies": {
+    "es8": "npm:@elastic/elasticsearch@^8.12.2",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^18.15.11",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.3"
+  }
+}
