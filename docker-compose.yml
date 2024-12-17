@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.2
+    container_name: supercatalogue_es_dev
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "http.cors.allow-origin='*'"
+      - "http.cors.enabled=true"
+      - "http.cors.allow-headers=X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization"
+      - "http.cors.allow-credentials=true"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    mem_limit: 4g
+    stdin_open: true
+    tty: true
