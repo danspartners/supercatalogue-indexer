@@ -4,7 +4,7 @@ import { mappings } from './mappings'
 const dataCiteIndex = 'dans-datacite'
 
 const dataCiteClientIDs = ['dans.dataversenl', 'dans.archive', 'delft.data4tu']
-const dataCiteBaseURL = 'https://api.test.datacite.org/dois?client-id='
+const dataCiteBaseURL = 'https://api.datacite.org/dois?client-id='
 const pagesPerClient = 100
 
 export async function indexDataCite() {
@@ -35,7 +35,7 @@ export async function indexDataCite() {
 				}
 
 				// Add geo points
-				item.location_dev = generateRandomGeoPoint()
+				// item.location_dev = generateRandomGeoPoint()
 				item.location = getGeoPoint(item)
 
 				item.publicationYear = item.attributes.publicationYear
@@ -75,13 +75,13 @@ function getGeoPoint(item: any) {
 	}
 }
 
-function generateRandomGeoPoint() {
-	const lat = (Math.random() * 180 - 90).toFixed(2)
-	const lon = (Math.random() * 360 - 180).toFixed(2)
-	return {
-		lat,
-		lon
-	}
-}
+// function generateRandomGeoPoint() {
+// 	const lat = (Math.random() * 180 - 90).toFixed(2)
+// 	const lon = (Math.random() * 360 - 180).toFixed(2)
+// 	return {
+// 		lat,
+// 		lon
+// 	}
+// }
 
 indexDataCite()

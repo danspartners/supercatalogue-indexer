@@ -1,0 +1,6 @@
+services:
+  elasticsearch:
+    container_name: supercatalogue_es_prod
+    environment:
+      - "http.cors.allow-origin='https://supercatalogue.dansdemo.nl'"
+    mem_limit: 8g
