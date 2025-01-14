@@ -12,7 +12,7 @@ docker compose up
 For production, change the provided docker-compose.prod.yml to reflect requirements and then run
 
 ```
-docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
+docker compose -f docker-compose.yml -f docker-compose.prod.yml up
 ```
 
 Alternatively, run it manually
