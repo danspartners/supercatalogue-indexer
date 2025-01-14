@@ -3,6 +3,20 @@
 # Run the script
 
 ## Step 1. Run an ElasticSearch dev container
+Use the provided Docker compose file 
+
+```
+docker compose up
+```
+
+For production, change the provided docker-compose.prod.yml to reflect requirements and then run
+
+```
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
+```
+
+Alternatively, run it manually
+
 ```bash
 docker run \
 	-d \

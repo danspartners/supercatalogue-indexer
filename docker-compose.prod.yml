@@ -2,5 +2,6 @@ services:
   elasticsearch:
     container_name: supercatalogue_es_prod
     environment:
+      - xpack.security.enabled=true
       - "http.cors.allow-origin='https://supercatalogue.dansdemo.nl'"
     mem_limit: 8g
